@@ -33,9 +33,19 @@ const handleAction = () =>{
 </template>
 
 <style scoped>
-.action{
+.action {
     display: inline-block;
     margin: 0 3px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.action:hover {
+    transform: scale(1.2);
+}
+
+.action:active {
+    transform: scale(1);
 }
 
 .play-background {
