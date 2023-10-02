@@ -1,5 +1,43 @@
-* {
-    box-sizing: border-box;
+/* Reset some common browser defaults */
+
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles (bullet points) */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default margin and padding for the body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove hyperlink styling */
+a {
+  text-decoration: none;
+}
+
+/* Remove default underlines on links */
+a:hover {
+  text-decoration: none;
+}
+
+/* Set a base font size and line height for better text readability */
+body {
+  font-size: 16px;
+}
+
+/* Optionally, set a default font-family to ensure consistency */
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {

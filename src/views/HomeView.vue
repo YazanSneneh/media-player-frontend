@@ -10,6 +10,7 @@ import MediaPlayer from '@/components/MediaPlayer.vue';
 
 <style scoped>
 .media-container {
-  padding: 7% 0;
+  padding: 200px 0;
 }
+
 </style>

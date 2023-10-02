@@ -64,26 +64,27 @@ const handleAction = (action: string) =>{
 <style scoped>
 .player {
     background: #1A1A1A;
-    width: 25%;
+    width: fit-content;
     margin: auto;
     border-radius: 10px;
-    padding: 0.5rem 0.4rem;
+    border: 1px solid green;
+    padding: 7px 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
 .audio-duration {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 5px;
     font-size: 0.9em;
 }
 
 .progress-bar {
-    display: inline-block;
-    width: 11rem;
     background: #FFFFFF;
+    height: 10px;
+    width: 166px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .progress-bar div {
@@ -92,12 +93,9 @@ const handleAction = (action: string) =>{
     height: 10px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 720px) {
     .hide {
         display: none;
-    }
-    .player {
-        width: fit-content;
     }
 }
 </style>
