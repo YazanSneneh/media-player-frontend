@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from "vue";
+
 
 const props = defineProps({
     url: {
@@ -19,19 +21,22 @@ const emits = defineEmits(["action"])
 const handleAction = () =>{
     emits("action", props.url)
 }
+
+let imagegUrl = computed(()=>{
+    if(props.url === "play") return `/images/bg.svg`
+    return `/images/${props.url}.svg`;
+})
 </script>
 
 <template>
     <div class="action" :class="classes" @click="handleAction">
-            <img v-if="url==='play'" :src="`/images/bg.svg`" :style="{ position: 'relative', top: '3px' }" />
-            <img v-else :src="`/images/${url}.svg`" :style="url== 'pause' ? {position: 'relative', top: '3px' }: ''" />
+            <img :src="imagegUrl" :style="url== 'pause' || 'play' ? {position: 'relative', top: '3px' }: ''" />
     </div>
 </template>
 
 <style scoped>
 .action {
     display: flex;
-    align-items: center;
     margin: 0 3px;
 }
 
