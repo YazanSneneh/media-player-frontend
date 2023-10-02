@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import LogEntry from "../types/Log.ts";
 import Entry from "../components/EntryComponent.vue"
 import { socket } from "@/socket";
 
